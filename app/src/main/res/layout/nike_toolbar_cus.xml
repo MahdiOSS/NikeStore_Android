@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    android:background="@color/white"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/cus_toolbar_title"
+        android:layout_width="wrap_content"
+        tools:text="@string/comments"
+        android:textAppearance="@style/H6"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="48dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/back_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_back"/>
+
+</FrameLayout>

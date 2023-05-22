@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:id="@+id/commentAllRootMain"
+    android:layout_height="match_parent"
+    tools:context=".View.home.CommentAllActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <com.abolfazloskooii.nikeshop.Base.NikeToolbar
+            android:id="@+id/commentListToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:nike_toolbar_cus="@string/comments"
+            >
+            <ImageView
+                android:id="@+id/sort_by_lasted"
+                android:layout_width="wrap_content"
+                tools:tooltipText="Sort By"
+                android:layoutDirection="rtl"
+                android:elevation="5dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sort"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="16dp"/>
+        </com.abolfazloskooii.nikeshop.Base.NikeToolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsRv"
+        android:layout_width="match_parent"
+        android:layoutDirection="rtl"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/insertCommentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="?colorPrimary"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_round_add_comment_24" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

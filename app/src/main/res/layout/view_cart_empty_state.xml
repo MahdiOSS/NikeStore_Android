@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/emptyStateRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:translationZ="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animView"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/empty_state" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:src="@drawable/ic_undraw_empty_cart"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/emptyStateMessageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/cartEmptyStateLoginRequired"
+            android:textAppearance="@style/Subtitle"
+            android:fontFamily="@font/f3"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/emptyStateCtaBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="20sp"
+            android:fontFamily="@font/f2"
+            android:layout_marginTop="16dp"
+            android:text="@string/cartEmptyStateCallToAction" />
+    </LinearLayout>
+</FrameLayout>

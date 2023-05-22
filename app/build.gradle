@@ -1,0 +1,104 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.abolfazloskooii.nikeshop'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.abolfazloskooii.nikeshop"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary true
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+//        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    buildscript {
+        ext.kotlin_version = '1.8.21'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    var room_version = "2.5.1"
+    def koin_android_version = "3.4.0"
+    def nav_version = "2.5.3"
+
+
+    //Room
+    //noinspection GradleDependency
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation "androidx.room:room-rxjava3:$room_version"
+
+    //Rx
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    //lifecycle Scopes
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
+    //Koin
+    implementation "io.insert-koin:koin-android:$koin_android_version"
+    //Timber
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+    //nav_component
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    implementation "androidx.navigation:navigation-runtime-ktx:$nav_version"
+    //Lottie
+    implementation 'com.airbnb.android:lottie:6.0.0'
+    //Fresco
+    implementation 'com.facebook.fresco:fresco:2.3.0'
+    //ViewPagerIndicator
+    implementation("com.tbuonomo:dotsindicator:4.3")
+    //Event Bus
+    implementation("org.greenrobot:eventbus:3.3.1")
+    //Log Request
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+    //open custom browser
+    implementation "androidx.browser:browser:1.5.0"
+    //BannerSlider
+   // implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
+
+}

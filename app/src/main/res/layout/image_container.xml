@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bannerSlid"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:layout_height="match_parent">
+
+    <com.abolfazloskooii.nikeshop.Base.NikeImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="match_parent"
+        app:roundedCornerRadius="12dp"
+        app:viewAspectRatio="0.93"
+        app:failureImage="@drawable/ic_eye"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

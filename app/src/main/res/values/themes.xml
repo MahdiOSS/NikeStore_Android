@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NikeShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorOnSurface">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/gray</item>
+        <!-- Customize your theme here. -->
+
+        <item name="textAppearanceHeadline6">@style/H6</item>
+        
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <item name="dividerColor">@color/darkGray</item>
+
+        <item name="android:lineSpacingExtra">4dp</item>
+
+        <item name="android:includeFontPadding">false</item>
+
+        <item name="android:screenOrientation">portrait</item>
+
+    </style>
+
+    <style parent="Theme.NikeShop" name="Theme.Nike.AuthTheme">
+
+    <item name="android:statusBarColor" >@color/black</item>
+
+    <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+    <item name="android:windowBackground">@color/black</item>
+
+    <item name="colorOnBackground">@color/white</item>
+
+    <item name="colorOnSurface">@color/white</item>
+
+    <item name="materialButtonStyle">@style/Theme.Nike.AuthTheme.Button</item>
+
+</style>
+
+</resources>

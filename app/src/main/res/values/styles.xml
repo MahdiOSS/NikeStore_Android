@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="H6" parent="@style/TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/vazir</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Body1" parent="@style/TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/samim</item>
+        <item name="alpha">0.8</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+    </style>
+
+    <style name="Body2" parent="@style/TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/samim</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+    </style>
+
+    <style name="Button" parent="@style/TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/samim</item>
+        <item name="textAppearanceHeadline6">@font/vazir_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Subtitle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/vazir_bold</item>
+        <item name="textAppearanceHeadline6">@font/vazir_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <declare-styleable name="NikeToolbar">
+        <attr name="nike_toolbar_cus" format="string" />
+    </declare-styleable>
+
+
+    <style name="Theme.Nike.AuthTheme.Button" parent="Theme.Nike.AuthTheme">
+
+        <item name="backgroundTint">?colorOnBackground</item>
+
+        <item name="android:textColor">@color/black</item>
+
+        <item name="cornerRadius">8dp</item>
+
+        <item name="android:fontFamily">@font/vazir_bold</item>
+
+    </style>
+
+
+    <style name="Theme.Nike.AuthTheme.EditText" parent="Theme.Nike.AuthTheme">
+
+        <item name="android:background">@drawable/background_auth_et</item>
+
+        <item name="android:textColorHint">#48ffffff</item>
+
+        <item name="android:textColor">?colorOnBackground</item>
+
+        <item name="android:textSize">16sp</item>
+
+        <item name="android:minHeight">48dp</item>
+
+        <item name="android:paddingStart">16dp</item>
+
+        <item name="android:paddingEnd">16dp</item>
+
+    </style>
+
+
+
+    <style name="ShippingTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="android:layout_marginStart">16dp</item>
+
+        <item name="android:layout_marginEnd">16dp</item>
+
+        <item name="android:layout_marginTop">8dp</item>
+
+    </style>
+
+
+    <style name="ShippingTextInputEditTextStyle" parent="Theme.NikeShop">
+
+        <item name="android:textSize">14sp</item>
+
+    </style>
+    <style name="Avatar">
+
+    <item name="cornerSize">50%</item>
+
+</style>
+
+    <style name="ProfileLinks">
+
+        <item name="android:minHeight">46dp</item>
+
+        <item name="android:gravity">center_vertical</item>
+
+        <item name="android:drawablePadding">12dp</item>
+
+        <item name="android:paddingStart">16dp</item>
+
+        <item name="android:background">?selectableItemBackground</item>
+
+        <item name="android:textAppearance">?textAppearanceBody1</item>
+
+        <item name="android:clickable">true</item>
+
+    </style>
+
+</resources>
